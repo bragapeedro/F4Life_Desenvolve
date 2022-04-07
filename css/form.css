@@ -1,0 +1,79 @@
+.formulario {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 4px;
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+.form input,
+.form textarea {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  background-color: #f7f7f7;
+  border: 1px solid #ededed;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario h2 {
+  font: 600 3rem/1.5 "Open Sans", sans-serif;
+  color: #f3fffe;
+  margin-bottom: 40px;
+}
+
+.emailInput span,
+.mensagemInput span {
+  display: none;
+  font: 600 1rem "Roboto", sans-serif;
+  color: rgb(218, 28, 28);
+  margin-top: 8px;
+}
+
+.mensagemInput {
+  grid-column: 1;
+}
+
+#textoSucesso {
+  font: 600 1rem "Roboto", sans-serif;
+  color: rgb(64, 177, 41);
+  margin-top: 8px;
+  position: absolute;
+}
+
+.bordaErro {
+  border: 2px solid rgb(206, 42, 42) !important;
+}
+
+.erro {
+  display: block !important;
+}
+
+#spanMensagem {
+  position: absolute;
+}
+
+#spanSucesso {
+  display: inline-block;
+  position: absolute;
+}
+.sucesso {
+  color: green;
+}
+
+@media (max-width: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}

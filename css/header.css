@@ -1,0 +1,118 @@
+.header-bg {
+  background-color: #132235;
+}
+
+.header img {
+  height: 300px;
+  width: 300px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -50px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: #ffffff;
+}
+
+.header-menu a {
+  display: inline-block;
+  padding: 16px 0px;
+  position: relative;
+  font: 400 1.125rem/1.35 "Open Sans", sans-serif;
+}
+
+.header-menu a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: #caf3f1;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu a:hover::after {
+  width: 100%;
+}
+
+#botao-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #menu {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    right: 0px;
+    transition: 0.6s;
+    background-color: #132235;
+    height: 0px;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #navegacao.active #menu {
+    /* display: flex; */
+    display: block;
+    height: 100vh;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  #botao-mobile {
+    margin-top: -20px;
+    display: flex;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 8px;
+  }
+  .icone-hamb {
+    color: #6bd8d1;
+    border-top: 3px solid;
+    width: 24px;
+    display: block;
+  }
+  .icone-hamb::after,
+  .icone-hamb::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #navegacao.active .icone-hamb {
+    border-top-color: transparent;
+  }
+  #navegacao.active .icone-hamb::after {
+    transform: rotate(135deg);
+    top: -8px;
+  }
+  #navegacao.active .icone-hamb::before {
+    transform: rotate(-135deg);
+  }
+  .header img {
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+}

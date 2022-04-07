@@ -1,0 +1,67 @@
+.casas-bg {
+  margin-top: 60px;
+  background-color: #f3fffe;
+}
+
+.casas {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.casas ul {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+
+.casas h2 {
+  margin-bottom: 40px;
+  font: 600 3rem/1.125 "Open Sans", sans-serif;
+  color: #111111;
+}
+
+.casas img {
+  margin-bottom: 16px;
+}
+
+.casas h3 {
+  font: 600 1.5rem/1.25 "Open Sans", sans-serif;
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.casas h3::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #6ddbd4;
+  align-self: center;
+  transition: 0.3s;
+}
+
+.casas a:hover h3::before {
+  height: 20px;
+  width: 20px;
+}
+
+.casas li span {
+  color: #595959;
+  font: 500 1.125rem/1.35 "Roboto", sans-serif;
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .casas ul {
+    flex-direction: column;
+  }
+  .casas ul li + li {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,51 @@
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.intro h1 {
+  color: #ffffff;
+  margin-bottom: 32px;
+  font: 600 4rem/1.125 "Open Sans", sans-serif;
+}
+
+.intro p {
+  margin-bottom: 20px;
+  color: #b2b2b2;
+  font: 400 1.5rem/1.5 "Roboto", sans-serif;
+}
+
+.intro img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.intro-conteudo {
+  align-self: center;
+}
+
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .intro h1 {
+    font-size: 3rem;
+  }
+  .intro p {
+    font-size: 1.1rem;
+    max-width: 60ch;
+  }
+  .intro img {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .intro img {
+    display: none;
+  }
+}
